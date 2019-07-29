@@ -41,10 +41,18 @@ describe('for all that related to users model', function() {
       })
     })
   })
-  describe('register to /api/users/registor', function() {
+  describe('register to /api/users/register', function() {
     describe('success register', function() {
-      it('not sending anyhting lol', (done) => {
-        
+      it('sends user with 200 status code', (done) => {
+        let input = {
+          username: 'ahsiap',
+          email: 'jays@mail.com',
+          password: 'jays'
+        }
+        chai
+          .request(app)
+          .post('/api/users/login').send(input)
+          .then(res => {})
       })
     })
   })
